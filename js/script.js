@@ -23,4 +23,10 @@ $(document).ready(function() {
 		$('#white-bg').fadeOut($fadeTime);
 		$('.homepage').fadeIn($fadeTime);
 	});
+	$('.fa-bars').click(function() {
+		$('.side-menu').animate({'margin-left': 0});
+	});
+	$('.fa-times').click(function() {
+		$('.side-menu').animate({'margin-left': '-500px'});
+	});
 });

@@ -1,7 +1,7 @@
 //===== VARIABLES =====
 // Intro on/off
-$intro-show: block; $home-show: none; // Show
-//$intro-show: none; $home-show: block; // Hide
+//$intro-show: block; $home-show: none; // Show
+$intro-show: none; $home-show: block; // Hide
 // Colors
 $black: #000;
 $white: #fff;
@@ -217,9 +217,41 @@ a {
 	}
 }
 
+.side-menu {
+	height: 100vh;
+	padding: 50px 0;
+	margin-left: -500px;
+	background: $black;
+	position: absolute;
+	z-index: 3;
+	.fa-times {
+		color: #777;
+		@include font-size(2);
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		&:hover {
+			color: $white;
+			cursor: pointer;
+		}
+	}
+	.side-menu-option {
+		padding: 20px 30px;
+		border-bottom: solid 1px #222;
+		color: #777;
+		@include font-size(1.4);
+		&:hover {
+			color: $white;
+			cursor: pointer;
+		}
+	}
+}
+
 //Version I home page
 .page-wrapper {
 	background: $background-gray;
+	position: relative;
+	z-index: 2;
 }
 .homepage {
 	max-width: 1000px;
@@ -250,12 +282,12 @@ a {
 		}
 	}
 	.content {
-		width: 280px;
+		width: 300px;
 		height: 280px;
 		margin: 5px auto;
 		margin-left: 3px;
 		margin-right: 3px;
-		padding: 10px;
+		//padding: 10px;
 		background: $white;
 		text-align: left;
 		overflow: hidden;
@@ -264,23 +296,74 @@ a {
 		.article-thumbnail {
 			width: 100%;
 			height: 150px;
-			margin: 0 0 5px 0;
+			margin: 0 0 0 0;
 			background: #666;
 			color: $lighter-gray;
 			text-align: center;
 			line-height: 150px;
 		}
+		.thumb-one {
+			background: url(https://dosomething-a.akamaihd.net/sites/default/files/styles/550x300/public/images/Human%20Trafficking.jpg?itok=CQuGyej5) no-repeat center center;
+			background-size: cover;
+		}
+		.thumb-two {
+			background: url(http://www.kualalumpurpost.net/wp-content/uploads/2013/04/human_trafficking.jpg) no-repeat center center;
+			background-size: cover;
+		}
+		.thumb-three {
+			background: url(http://publications.europeintheworld.com/wp-content/uploads/2013/10/human-trafficking.jpg) no-repeat center center;
+			background-size: cover;
+		}
+		.thumb-four {
+			background: url(http://curacaochronicle.com/wp-content/uploads/2012/11/Press-TV.jpg) no-repeat center center;
+			background-size: cover;
+		}
+		.thumb-five {
+			background: url(http://gdb.rferl.org/912FA377-D50B-4190-A76B-481F247F21B5_w640_r1_s_cx0_cy9_cw0.jpg) no-repeat center center;
+			background-size: cover;
+		}
+		.thumb-six {
+			background: url(http://internationalpoliticalforum.com/wp-content/uploads/2013/12/2048873899_1365622940.jpg) no-repeat center center;
+			background-size: cover;
+		}
+		.thumb-seven {
+			background: url(http://one-europe.info/user/files/Andreea%20Anastasiu/dreamstime_m_32349546.jpg) no-repeat center center;
+			background-size: cover;
+		}
+		.thumb-eight {
+			background: url(http://flarenetwork.org/media/thumbs/resize/290x290/images/learn/learn_20091222_sweden_humantrafficking.jpg) no-repeat center center;
+			background-size: cover;
+		}
+		.thumb-nine {
+			background: url(http://www.worldnewstomorrow.com/wp-content/uploads/2012/05/london_human_trafficking-300x222.png) no-repeat center center;
+			background-size: cover;
+		}
+		.thumb-ten {
+			background: url(http://www.fbi.gov/news/stories/2015/january/human-trafficking-ring-dismantled/image/stop-human-trafficking-graphic) no-repeat center center;
+			background-size: cover;
+		}
+		.thumb-eleven {
+			background: url(http://www.zephoria.org/images/blog/2011/12/GirlPain.jpg) no-repeat center center;
+			background-size: cover;
+		}
+		.thumb-twelve {
+			background: url(http://thephilanews.s3.amazonaws.com/wp-content/uploads/2011/10/Human-Trafficking-Legislation-Approved-By-Senate-Committee.jpg) no-repeat center center;
+			background-size: cover;
+		}
 		.article-title {
+			padding: 5px 10px 0 10px;
 			font-family: $oswald;
 			@include font-size(2);
 		}
 		.article-byline {
-			margin: 3px 0 15px 0;
+			margin: 3px 0 10px 0;
+			padding: 0 10px;
 			color: #333;
 			@include font-size(0.9);
 			font-style: italic;
 		}
 		.article-summary {
+			padding: 0 10px;
 			color: #555;
 			@include font-size(0.9);
 		}
@@ -318,9 +401,9 @@ a {
 		}
 	}
 	.larger-content {
-		width: 590px;
+		width: 610px;
 		@media #{$break700} {
-			width: 280px;
+			width: 300px;
 		}
 		.article-thumbnail {
 			width: 380px;
@@ -439,208 +522,6 @@ a {
 	}
 }
 
-
-// Version II homepage
-.homepage-II {
-	max-width: 1400px;
-	margin: 0 auto;
-	padding: 50px;
-	@media #{$break400} {
-		padding: 30px;
-	}
-	.left-column-II {
-		width: 65%;
-		margin: 80px 0;
-		padding: 0 20px 0 0;
-		border-right: solid 1px $lighter-gray;
-		display: inline-block;
-		@media #{$break1000} {
-			width: auto;
-			padding: 0;
-			border: none;
-		}
-		@media #{$break600} {
-			margin: 50px 0;
-		}
-		.project-title-II {
-			margin: 0 0 30px 0;
-			font-family: $oswald;
-			@include font-size(3);
-			@media #{$break600} {
-				margin: 0 0 15px 0;
-				@include font-size(2.5);
-			}
-		}
-		.project-description-II {
-			padding: 0 0 30px 0;
-			border-bottom: solid 1px $lighter-gray;
-			@include font-size(1.2);
-			line-height: 30px;
-			@media #{$break600} {
-				@include font-size(1);
-				line-height: 25px;
-			}
-		}
-		.article-II {
-			padding: 20px 0 30px 0;
-			border-bottom: solid 1px $lighter-gray;
-			&:last-of-type {
-				border: none;
-			}
-			.image-II {
-				width: 200px;
-				height: 150px;
-				margin: 0 25px 0 0;
-				background: #999;
-				color: $lighter-gray;
-				text-align: center;
-				line-height: 150px;
-				float: left;
-				@media #{$break500} {
-					width: 100%;
-					height: 200px;
-					margin: 0 0 15px 0;
-					line-height: 200px;
-					float: none;
-				}
-			}
-			.article-text-II {
-				.headline-II {
-					font-family: $oswald;
-					@include font-size(2);
-				}
-				.byline-II {
-					margin: 5px 0 20px 0;
-					color: #444;
-					@include font-size(1);
-					font-style: italic;
-				}
-				.summary-II {
-					line-height: 23px;
-				}
-			}
-		}
-	}
-	.right-column-II {
-		width: 30%;
-		padding: 100px 0 100px 20px;
-		display: inline-block;
-		@media #{$break1000} {
-			width: 100%;
-			padding: 0;
-		}
-		.right-column-section-II {
-			width: 100%;
-			height: 300px;
-			margin: 25px 0;
-			border: solid 1px #333;
-			text-align: center;
-			line-height: 300px;
-		}
-	}
-}
-// Version II article template
-.article-page-wrapper-II {
-	max-width: 1500px;
-	margin: 0 auto;
-	padding: 70px 50px;
-	overflow: hidden;
-	@media #{$break400} {
-		padding: 50px 20px;
-	}
-	.article-header-text-II {
-		margin: 30px 0 0 0;
-		display: inline-block;
-		@media #{$break1000} {
-			display: block;
-		}
-		@media #{$break600} {
-			margin: 15px 0 0 0;
-		}
-		.article-headline-II {
-			font-family: $oswald;
-			@include font-size(3);
-			@media #{$break600} {
-				@include font-size(2.5);
-			}
-		}
-		.article-byline-II {
-			margin: 5px 0 10px 0;
-			font-style: italic;
-		}
-		.article-date-II {
-			@include font-size(0.9);
-		}
-	}
-	.related-article-II {
-		width: 150px;
-		height: 100px;
-		margin: 0 10px;
-		background: $light-gray;
-		float: right;
-	}
-	.social-media-icons {
-		margin: 3px 0 0 0;
-		padding-bottom: 20px;
-		.social-media-icon {
-			width: 25px;
-			height: 25px;
-			border-radius: 100%;
-			margin: 5px 0 0 0;
-			color: $white;
-			text-align: center;
-			display: inline-block;
-			&:hover {cursor: pointer}
-			.fa-facebook {
-				margin: 5px 0 0 3px;
-				@include font-size(1.3);
-			}
-			.fa-twitter {
-				margin: 3px 0 0 2px;
-				@include font-size(1.3);
-			}
-		}
-		.facebook {
-			background: #45619D;
-		}
-		.twitter {
-			background: #20B8FF;
-		}
-	}
-	.article-thumbnail-II {
-		width: 500px;
-		height: 300px;
-		margin: 20px 40px 30px 0;
-		background: $light-gray;
-		color: $lighter-gray;
-		@include font-size(1.5);
-		text-align: center;
-		line-height: 300px;
-		float: left;
-		@media #{$break1000} {
-			width: 100%;
-			height: 500px;
-			line-height: 500px;
-		}
-		@media #{$break800} {
-			height: 300px;
-			line-height: 300px;
-		}
-		@media #{$break600} {
-			height: 200px;
-			@include font-size(1);
-			line-height: 200px;
-		}
-	}
-	.article-content-II {
-		margin: 20px 0;
-		p {
-			margin: 10px 0;
-			line-height: 25px;
-		}
-	}
-}
-
 // ABOUT PAGE
 .about-page {
 	max-width: 800px;
@@ -675,7 +556,7 @@ a {
 			text-align: center;
 		}
 	.author-wrapper {
-		padding: 50px 0 40px 0;
+		padding: 30px 0 20px 0;
 		border-bottom: solid 1px #dcdcdc;
 		&:last-of-type {
 			border: none;
@@ -793,6 +674,8 @@ a {
 	.graphic-description {
 		p {
 			margin: 0 0 20px 0;
+			font-family: $georgia;
+			line-height: 25px;		
 		}
 	}
 }
