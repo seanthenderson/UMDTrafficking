@@ -23,10 +23,19 @@ $(document).ready(function() {
 		$('#white-bg').fadeOut($fadeTime);
 		$('.homepage').fadeIn($fadeTime);
 	});
-	$('.fa-bars').click(function() {
-		$('.side-menu').animate({'margin-left': 0});
-	});
-	$('.fa-times').click(function() {
-		$('.side-menu').animate({'margin-left': '-500px'});
-	});
+
+	// Load header
+	$('.menu-bar').load('ajax/header.html');
+	//Load side menu 
+	$('.side-menu').load('ajax/side-menu.html');
+	//Load footer
+	$('.footer').load('ajax/footer.html');
+});
+
+// Show or hide side menu
+$(document).on('click','.fa-bars',function() {
+	$('.side-menu').animate({'margin-left': 0});
+});	
+$(document).on('click','.fa-times',function() {
+	$('.side-menu').animate({'margin-left': '-500px'});
 });
