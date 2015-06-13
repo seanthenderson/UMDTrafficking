@@ -19,7 +19,7 @@ $(document).ready(function() {
 	});
 	$('.skip-intro').click(function() {
 		$(this).fadeOut($fadeTime);
-		$('.intro-page').fadeOut($fadeTime);
+		$('.intro-page').delay(350).fadeOut($fadeTime);
 		$('#white-bg').fadeOut($fadeTime);
 		$('.homepage').fadeIn($fadeTime);
 	});
@@ -38,4 +38,15 @@ $(document).on('click','.fa-bars',function() {
 });	
 $(document).on('click','.fa-times',function() {
 	$('.side-menu').animate({'margin-left': '-500px'});
+});
+
+// Skip intro by pressing 's'
+$(document).keypress(function(e) {
+	$fadeTime = 1000;
+  	if (e.which == 13) {
+	    $('.skip-intro').fadeOut($fadeTime);
+		$('.intro-page').delay(350).fadeOut($fadeTime);
+		$('#white-bg').fadeOut($fadeTime);
+		$('.homepage').fadeIn($fadeTime);
+  	}
 });

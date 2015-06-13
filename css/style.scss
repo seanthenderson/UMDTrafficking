@@ -26,9 +26,12 @@ $gnuolane: "Gnuolane", sans-serif;
 // Media Queries
 $break1100: "only screen and (max-width : 1100px)";
 $break1000: "only screen and (max-width : 1000px)";
+$break850: "only screen and (max-width : 850px)";
 $break800: "only screen and (max-width : 800px)";
 $break700: "only screen and (max-width : 700px)";
+$break650: "only screen and (max-width : 650px)";
 $break600: "only screen and (max-width : 600px)";
+$break550: "only screen and (max-width : 550px)";
 $break500: "only screen and (max-width : 500px)";
 $break400: "only screen and (max-width : 400px)";
 
@@ -287,20 +290,33 @@ a {
 		margin: 5px auto;
 		margin-left: 3px;
 		margin-right: 3px;
-		//padding: 10px;
 		background: $white;
 		text-align: left;
 		overflow: hidden;
 		display: inline-block;
 		position: relative;
+		@media #{$break1000} {width: 34%;}
+		@media #{$break850} {
+			width: 44.5%;
+			height: 400px;
+		}
+		@media #{$break550} {
+			width: 90% !important;
+			height: auto !important;
+			padding-bottom: 10px;
+		}
 		.article-thumbnail {
 			width: 100%;
 			height: 150px;
-			margin: 0 0 0 0;
+			margin: 0 0 4px 0;
 			background: #666;
 			color: $lighter-gray;
 			text-align: center;
 			line-height: 150px;
+			@media #{$break850} {height: 200px;}
+			@media #{$break550} {height: 300px !important;}
+			@media #{$break500} {height: 250px !important;}
+			@media #{$break400} {height: 200px !important;}
 		}
 		.thumb-one {
 			background: url(https://dosomething-a.akamaihd.net/sites/default/files/styles/550x300/public/images/Human%20Trafficking.jpg?itok=CQuGyej5) no-repeat center center;
@@ -323,32 +339,10 @@ a {
 			background-size: cover;
 		}
 		.thumb-six {
+			margin: 0 0 15px 10px !important;
 			background: url(http://internationalpoliticalforum.com/wp-content/uploads/2013/12/2048873899_1365622940.jpg) no-repeat center center;
 			background-size: cover;
-		}
-		.thumb-seven {
-			background: url(http://one-europe.info/user/files/Andreea%20Anastasiu/dreamstime_m_32349546.jpg) no-repeat center center;
-			background-size: cover;
-		}
-		.thumb-eight {
-			background: url(http://flarenetwork.org/media/thumbs/resize/290x290/images/learn/learn_20091222_sweden_humantrafficking.jpg) no-repeat center center;
-			background-size: cover;
-		}
-		.thumb-nine {
-			background: url(http://www.worldnewstomorrow.com/wp-content/uploads/2012/05/london_human_trafficking-300x222.png) no-repeat center center;
-			background-size: cover;
-		}
-		.thumb-ten {
-			background: url(http://www.fbi.gov/news/stories/2015/january/human-trafficking-ring-dismantled/image/stop-human-trafficking-graphic) no-repeat center center;
-			background-size: cover;
-		}
-		.thumb-eleven {
-			background: url(http://www.zephoria.org/images/blog/2011/12/GirlPain.jpg) no-repeat center center;
-			background-size: cover;
-		}
-		.thumb-twelve {
-			background: url(http://thephilanews.s3.amazonaws.com/wp-content/uploads/2011/10/Human-Trafficking-Legislation-Approved-By-Senate-Committee.jpg) no-repeat center center;
-			background-size: cover;
+			float: right !important;
 		}
 		.article-title {
 			padding: 5px 10px 0 10px;
@@ -356,16 +350,18 @@ a {
 			@include font-size(2);
 		}
 		.article-byline {
-			margin: 3px 0 10px 0;
+			margin: 5px 0 10px 0;
 			padding: 0 10px;
 			color: #333;
 			@include font-size(0.9);
 			font-style: italic;
 		}
 		.article-summary {
-			padding: 0 10px;
+			padding: 0 15px 0 10px;
 			color: #555;
 			@include font-size(0.9);
+			line-height: 17px;
+			p {margin-bottom: 20px;}
 		}
 		.article-social-media-icons {
 			position: absolute;
@@ -400,39 +396,59 @@ a {
 			}
 		}
 	}
-	.larger-content {
-		width: 610px;
-		@media #{$break700} {
-			width: 300px;
+	.larger-content,
+	.medium-content {
+		width: 900px;
+		height: 280px;
+		@media #{$break1000} {
+			width: 90%;
+			height: auto;
 		}
 		.article-thumbnail {
 			width: 380px;
 			height: 280px;
-			margin: 0 10px 10px 0;
+			margin: 0 15px 0 0;
 			line-height: 280px;
 			float: left;
-			@media #{$break700} {
+			@media #{$break850} {
+				width: 50%;
+				height: 320px;
+			}
+			@media #{$break650} {
 				width: 100%;
-				height: 150px;
-				margin: 0 0 5px 0;
-				line-height: 150px;
-				float: none;
+				margin-bottom: 10px;
 			}
 		}
 		.article-text {
 			margin: 10px 0 0 0;
 			position: relative;
-			@media #{$break700} {
-				height: 120px;
-				margin: 0;
-				overflow: hidden;
+		}
+	}
+	.medium-content {
+		width: 592px;
+		@media #{$break1000} {width: 55%;}
+		@media #{$break850} {
+			width: 44.5%;
+			height: 400px;
+		}
+		.article-thumbnail {
+			width: 350px;
+			@media #{$break1000} {width: 55%;}
+			@media #{$break850} {
+				width: 100%;
+				height: 200px;
+				margin-bottom: 7px;
 			}
-			.article-title {
-				@include font-size(2.5);
-				@media #{$break700} {
-					@include font-size(2);
-				}
+		}
+		.article-text .article-title {
+			@media #{$break850} {
+				@include font-size(2);
 			}
+		}
+	}
+	.larger-content:last-of-type {
+		.article-text {
+			margin-left: 5px;
 		}
 	}
 }
