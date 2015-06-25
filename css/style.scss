@@ -82,6 +82,8 @@ a {
 		@include font-size(2.8);
 		line-height: 60px;
 		display: none;
+		position: relative;
+		z-index: 6;
 		@media #{$break600} {
 			padding: 100px 30px;
 			@include font-size(2);
@@ -95,12 +97,15 @@ a {
 	}
 	.skip-intro {
 		width: 100px;
+		height: 13px;
 		margin: 20px;
 		padding: 10px;
 		border: solid 2px $light-gray;
 		color: $light-gray;
 		@include font-size(0.8);
 		float: right;
+		position: relative;
+		z-index: 999;
 		&:hover {
 			border: solid 2px $white;
 			color: $white;
@@ -152,6 +157,8 @@ a {
 		color: $lighter-gray;
 		@include font-size(2);
 		float: left;
+		position: relative;
+		z-index: 999;
 		&:hover {
 			color: $white;
 			cursor: pointer;
@@ -261,6 +268,7 @@ a {
 	margin: 0 auto;
 	padding: 30px 0 100px 0;
 	text-align: center;
+	position: relative;
 	display: $home-show;
 	.project-title-wrapper {
 		width: 800px;
@@ -286,7 +294,7 @@ a {
 	}
 	.content {
 		width: 300px;
-		height: 280px;
+		height: 330px;
 		margin: 5px auto;
 		margin-left: 3px;
 		margin-right: 3px;
@@ -319,35 +327,36 @@ a {
 			@media #{$break400} {height: 200px !important;}
 		}
 		.thumb-one {
-			background: url(https://dosomething-a.akamaihd.net/sites/default/files/styles/550x300/public/images/Human%20Trafficking.jpg?itok=CQuGyej5) no-repeat center center;
+			background: url(../images/web-ready/overview/overview-front.jpg) no-repeat center center;
 			background-size: cover;
 		}
 		.thumb-two {
-			background: url(http://www.kualalumpurpost.net/wp-content/uploads/2013/04/human_trafficking.jpg) no-repeat center center;
+			background: url(../images/web-ready/enforcement/enforcement-front-no-text.jpg) no-repeat center center;
 			background-size: cover;
 		}
 		.thumb-three {
-			background: url(http://publications.europeintheworld.com/wp-content/uploads/2013/10/human-trafficking.jpg) no-repeat center center;
+			background: url(../images/web-ready/veasey/veasey-front-no-text.jpg) no-repeat center center;
 			background-size: cover;
 		}
 		.thumb-four {
-			background: url(http://curacaochronicle.com/wp-content/uploads/2012/11/Press-TV.jpg) no-repeat center center;
+			background: url(../images/web-ready/felony/felony-1-notext-nocolor.jpg) no-repeat center center;
 			background-size: cover;
 		}
 		.thumb-five {
-			background: url(http://gdb.rferl.org/912FA377-D50B-4190-A76B-481F247F21B5_w640_r1_s_cx0_cy9_cw0.jpg) no-repeat center center;
+			background: url(../images/web-ready/community/community-front-no-text.jpg) no-repeat center center;
 			background-size: cover;
 		}
 		.thumb-six {
-			margin: 0 0 15px 10px !important;
-			background: url(http://internationalpoliticalforum.com/wp-content/uploads/2013/12/2048873899_1365622940.jpg) no-repeat center center;
+			margin: 0 0 0 10px !important;
+			background: url(../images/web-ready/labor/labor-front-2.jpg) no-repeat center center;
 			background-size: cover;
 			float: right !important;
 		}
 		.article-title {
-			padding: 5px 10px 0 10px;
+			padding: 5px 10px 10px 10px;
 			font-family: $oswald;
 			@include font-size(2);
+			line-height: 2.2rem;
 		}
 		.article-byline {
 			margin: 5px 0 10px 0;
@@ -399,20 +408,20 @@ a {
 	.larger-content,
 	.medium-content {
 		width: 900px;
-		height: 280px;
+		height: 320px;
 		@media #{$break1000} {
 			width: 90%;
 			height: auto;
 		}
 		.article-thumbnail {
-			width: 380px;
-			height: 280px;
+			width: 440px;
+			height: 330px;
 			margin: 0 15px 0 0;
 			line-height: 280px;
 			float: left;
 			@media #{$break850} {
 				width: 50%;
-				height: 320px;
+				height: 360px;
 			}
 			@media #{$break650} {
 				width: 100%;
@@ -426,13 +435,14 @@ a {
 	}
 	.medium-content {
 		width: 592px;
+		height: 330px;
 		@media #{$break1000} {width: 55%;}
 		@media #{$break850} {
 			width: 44.5%;
 			height: 400px;
 		}
 		.article-thumbnail {
-			width: 350px;
+			width: 380px;
 			@media #{$break1000} {width: 55%;}
 			@media #{$break850} {
 				width: 100%;
@@ -442,7 +452,7 @@ a {
 		}
 		.article-text .article-title {
 			@media #{$break850} {
-				@include font-size(2);
+				@include font-size(1.9);
 			}
 		}
 	}
@@ -468,14 +478,14 @@ a {
 		}
 		.article-image {
 			width: 100%;
-			height: 400px;
+			//height: 400px;
 			margin: 30px auto;
 			border-bottom: solid 1px #dcdcdc;
 			@include font-size(2.5);
 			text-align: center;
 			line-height: 400px;
 			@media #{$break600} {
-				height: 200px;
+				//height: 200px;
 				line-height: 180px;
 				@include font-size(1.5);
 			}
@@ -489,6 +499,18 @@ a {
 			font-family: $oswald;
 			@include font-size(3.2);
 			font-weight: 600;
+			@media #{$break850} {
+				font-size: 38px !important;
+				line-height: 45px !important;
+			}
+			@media #{$break600} {
+				font-size: 30px !important;
+				line-height: 40px !important;  
+			}
+			@media #{$break400} {
+				font-size: 28px !important;
+				line-height: 35px !important;
+			}
 		}
 		.article-byline {
 			margin: 8px 0 0 0;
@@ -497,6 +519,10 @@ a {
 			@include font-size(1.1);
 			font-weight: 300;
 			font-style: italic;
+			@media #{$break850} {
+				@include font-size(1);
+				line-height: 20px;
+			}
 		}
 		.social-media-icons {
 			margin: 3px 0 0 0;
@@ -549,12 +575,13 @@ a {
 		margin: 10px auto 0 auto;
 		padding: 10px 30px;
 	}
-	@media #{$break400} {padding: 0 30px;}
+	@media #{$break400} {padding: 0 30px 50px 30px;}
 	.about-title {
 		padding: 80px 0 30px 0;
 		font-family: $oswald;
 		@include font-size(3);
 		font-weight: bold;
+		line-height: 50px;
 	}
 	.about-description {
 		color: #333;

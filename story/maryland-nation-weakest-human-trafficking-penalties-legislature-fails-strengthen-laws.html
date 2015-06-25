@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Maryland Has Some of Nation's Weakest Human Trafficking Penalties | Human Trafficking in Maryland</title>
+				<script src="../js/jquery-1.11.2.min" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="../css/reset.css" type="text/css" rel="stylesheet">
+		<link href="../css/style.css" type="text/css" rel="stylesheet">
+		<link href="../css/internalstyles.css" type="text/css" rel="stylesheet">
+		<!--===== FONTS =====-->
+		<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/font-awesome-4.3.0/css/font-awesome.min.css">
+		<meta property="og:url" content="http://cnsmaryland.org/human-trafficking/story/maryland-nation-weakest-human-trafficking-penalties-legislature-fails-strengthen-laws.html" />
+		<meta property="og:type" content="article" />
+		<meta property="og:site_name" content="CNS Maryland" />
+		<meta property="article:publisher" content="https://www.facebook.com/MarylandCNS" />
+		<meta property="og:title" content="Maryland Has Some of Nation's Weakest Human Trafficking Penalties" />
+		<meta property="og:description" content="A bill to strengthen trafficking penalties died in the Maryland General Assembly this session." />
+		<meta property="og:image"              content="http://cnsmaryland.org/human-trafficking/images/web-ready/felony/felony-fb1.jpg" />
+		<meta property="og:image:width" content="1000" />
+		<meta property="og:image:height" content="541" />
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@CNSmd">
+		<meta name="twitter:creator" content="@CNSmd">
+		<meta name="twitter:title" content="Maryland Has Some of Nation's Weakest Human Trafficking Penalties">
+		<meta name="twitter:description" content="A bill to strengthen trafficking penalties died in the Maryland General Assembly this session.">
+		<meta name="twitter:image" content="http://cnsmaryland.org/human-trafficking/images/web-ready/felony/felony-twitter1.jpg">
+		<meta name="twitter:image:width" content="1000">
+		<meta name="twitter:image:height" content="535">
+		<script type='text/javascript'>
+
+$(function () {
+    // Instantiate the map
+    $('#mapcontainer').highcharts('Map', {
+        chart: {
+            spacingBottom: 20,
+			backgroundColor: '#252527'
+        },
+        title : {
+            text : 'Maryland One of Two States with Weaker Human Trafficking Penalty',
+			style: {
+				color: 'white',
+				font: ''
+			}
+        },
+        subtitle: {
+        	text: 'Maryland and Nebraska are the only two states that allow human trafficking to be charged as a misdemeanor, which generally carries a lighter penalty than a felony, according to a March 2015 analysis by Nathaniel Erb, a policy consultant with The Samaritan Women. In both of those states, the crime can be charged as a felony or misdemeanor.'  ,
+        	style: {
+				color: 'white',
+				font: ''
+			} 
+        },
+        legend: {
+            enabled: true,
+			title: {
+				text: 'Minimum Penalty for Human Trafficking',
+				style: {
+					color: 'white',
+					fontWeight: 'bold'
+				}
+			},
+			itemStyle: {
+				color: 'white',
+				textDecoration: 'none'
+			},
+			itemHoverStyle: {
+				color: 'gray'
+			}
+        },
+        plotOptions: {
+            map: {
+                allAreas: false,
+                joinBy: ['hc-key', 'code'],
+                dataLabels: {
+                    enabled: true,
+                    color: 'white',
+                    formatter: function () {
+                        if (this.point.properties && this.point.properties.labelrank.toString() < 5) {
+                            return this.point.properties['iso-a2'];
+                        }
+                    },
+                    format: null,
+                    style: {
+                        fontWeight: 'bold'
+                    }
+                },
+				mapData: Highcharts.maps['countries/us/us-all'],
+                tooltip: {
+					enabled: false,
+                    headerFormat: '',
+                    pointFormat: '{point.name}: <b>{series.name}</b>'
+                }
+
+            }
+        },
+		series : [
+			{
+				name: 'Felony (or no classification)',
+				data: $.map(['us-al', 'us-ak', 'us-az', 'us-ar', 'us-ca', 'us-co', 'us-ct', 'us-de', 'us-fl', 'us-ga', 'us-hi', 'us-id', 'us-il', 'us-in', 'us-ia', 'us-ks', 'us-ky', 'us-la', 'us-me', 'us-ma', 'us-mi', 'us-mn', 'us-mo', 'us-nv', 'us-nh', 'us-nm', 'us-ny', 'us-nc', 'us-nd', 'us-oh', 'us-ok', 'us-or', 'us-pa', 'us-ri', 'us-sc', 'us-sd', 'us-tn', 'us-tx', 'us-ut', 'us-vt', 'us-va', 'us-wa', 'us-wv', 'us-wi', 'us-wy', 'us-ms', 'us-mt', 'us-nj', 'us-dc'], 
+				function (code) {
+					return {
+						code: code
+					};
+				}),
+				color:'#686868'
+            }, {
+				name: 'Misdemeanor',
+				data: $.map(['us-md', 'us-ne'], 
+				function (code) {
+					return {
+						code: code
+					};
+				}),
+				color:'#AD0000'
+			}
+		],
+		credits: {
+			text: 'Capital News Service graphic by Jin Kim',
+        	href: 'link'
+		}
+    });
+});
+</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="menu-bar">
+				<i class="fa fa-bars"></i>
+			
+				<div class="social-media-icons">
+					<div class="social-media-icon facebook">
+						<a href="https://www.facebook.com/sharer/sharer.php?u=http://cnsmaryland.org/human-trafficking/story/maryland-nation-weakest-human-trafficking-penalties-legislature-fails-strengthen-laws.html" target="_blank"><i class="fa fa-facebook"></i></a>
+					</div>
+					<div class="social-media-icon twitter">
+						<a href="https://twitter.com/home?status=Maryland%20Has%20Some%20of%20Nation's%20Weakest%20Human%20Trafficking%20Penalties%20%7C%20An%20%40CNSmd%20Investigation%20http://cnsmaryland.org/human-trafficking/story/maryland-nation-weakest-human-trafficking-penalties-legislature-fails-strengthen-laws.html" target="_blank"><i class="fa fa-twitter"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="side-menu">
+		<i class="fa fa-times"></i>
+		<div class="side-menu-option">
+			<span class="smmenutitle">THE BROTHEL<br>NEXT DOOR</span>
+			<span class="smsubtitle">Human Trafficking<br>in Maryland</span>
+			<a href="http://cnsmaryland.org" target="_blank"><span class="smcnsflag">A Capital News<br>Service Investigation</span></a>
+		</div>
+		<a href="../index.html"><div class="side-menu-option"><span class="smmenubuttons">Home</span></div></a>
+		<a href="../about.html"><div class="side-menu-option"><span class="smmenubuttons">About</span></div></a>
+	</div>
+
+		
+			
+		</div>
+		<div class="article-page-wrapper">
+			<div class="article-page">
+			<div class="article-date">May 27, 2015</div>
+				<div class="article-title">Maryland Has Some of Nation's Weakest Human Trafficking Penalties, but Legislature Fails to Strengthen Laws</div>
+				<div class="article-byline"><i>By Jon Banister, Lisa Driscoll and Jessica Evans
+</i></div>
+				<div class="social-media-icons">
+					<div class="social-media-icon facebook">
+						<a href="https://www.facebook.com/sharer/sharer.php?u=http://cnsmaryland.org/human-trafficking/story/maryland-nation-weakest-human-trafficking-penalties-legislature-fails-strengthen-laws.html" target="_blank"><i class="fa fa-facebook"></i></a>
+					</div>
+					<div class="social-media-icon twitter">
+							<a href="https://twitter.com/home?status=Maryland%20Has%20Some%20of%20Nation's%20Weakest%20Human%20Trafficking%20Penalties%20%7C%20An%20%40CNSmd%20Investigation%20http://cnsmaryland.org/human-trafficking/story/maryland-nation-weakest-human-trafficking-penalties-legislature-fails-strengthen-laws.html" target="_blank"><i class="fa fa-twitter"></i></a>
+					</div>
+				</div>
+				<div class="article-image">
+					<img src="../images/web-ready/felony/felony-1-notext-nocolor.jpg">
+					<div class="smphotocaption">The Maryland Senate meets on the last day of the 2015 legislative session. A bill that would have increased the penalty for trafficking adults to a felony in all cases died in a legislative committee this year. Capital News Service Photo by James Levin</div>
+
+				</div>
+					<div class="article-content">
+
+<p>ANNAPOLIS &#151; Maryland has some of the lightest penalties in the nation for human trafficking of adults, which police officers and advocates say draws traffickers into the state. 
+</p><p>
+A bill to strengthen trafficking penalties died in the Maryland General Assembly this session. Among the biggest opponents were advocacy groups working to end trafficking, who said the bill might have ensnared people trying to help a victim and imposed felony penalties on them. 
+</p><p>
+&#147;People who would directly be impacted by the law are very rarely consulted with in development of anti-trafficking policy and that&#146;s why things go wrong and that&#146;s why this legislation has been pulled,&#148; said Penelope Saunders, spokeswoman for the Best Practices Policy Project, a national organization advocating for the rights of sex workers.
+</p><p>
+While trafficking a minor is a felony with penalties up to 25 years in prison, trafficking a person 18 or older is a misdemeanor unless prosecutors can prove the suspect used &#147;force, threat, coercion or fraud&#148; to control the victim. The misdemeanor charge carries a maximum sentence of 10 years in prison.
+</p><p>
+Sgt. Deborah Flory of the State Police&#146;s Child Recovery Unit said she has interviewed traffickers who refuse to bring children to Maryland because of the stiff penalties.
+ </p>
+  <div class="smpullquote">
+ 	<div class="smquotetext">
+ 	<p>Traffickers <span class="curly">&#147;</span>&#8201;know that trafficking an adult is a misdemeanor, it&#146;s not a big deal and they&#146;ll be back out in a couple hours&#133;They&#146;re not even scared of us.&#8201;<span class="curly">&#148;</span> </p>
+ 	</div>
+ 	<div class="smquotecredit">
+ 	<p>&#151;Sgt. Deborah Flory, State Police Child Recovery Unit</p>
+ 	</div>
+ 
+ </div>
+
+ 
+ <p>
+&#147;But they know that trafficking an adult is a misdemeanor, it&#146;s not a big deal and they&#146;ll be back out in a couple hours,&#148; Flory said.
+</p><p>
+&#147;We&#146;re actually talking to these guys on the street who are trafficking [adults] and they&#146;re not even scared of us… they&#146;re very aware of what the laws are in certain states they travel to.&#148; 
+</p><p>
+From 2010 through 2014, 19 people statewide were charged under the state&#146;s felony provision that targets traffickers of adult victims, according to a Capital News Service analysis of data provided by the Maryland Department of Public Safety and Correctional Services. 
+</p><p>
+The misdemeanor human trafficking charge, the more lenient of Maryland&#146;s human trafficking punishments, is used much more frequently. Across the state, in the same time period, 215 cases were prosecuted under the misdemeanor provision of the law.
+</p><p>
+In two-thirds of cases from 2010 to 2014, all human trafficking charges were dropped.
+</p><p>
+In Baltimore, according to a search of public records, eight of 10 misdemeanor trafficking cases since January 2013 ended with prosecutors dropping charges.  One case ended in conviction on a separate charge, and another ended in a stet agreement, meaning it was indefinitely postponed, a search of case records showed. 
+ </p><p>
+A bill to increase the penalty for trafficking adults to a felony in all cases was voted down in Annapolis this spring by a legislative committee and withdrawn by its Senate sponsor.
+ </p><p>
+&#147;Currently if it&#146;s a misdemeanor, you have people who go out and exploit individuals, they may get a fine, under a year in prison, but they&#146;re going to do it again,&#148; said Delegate Susan Aumann, R-Baltimore County, the bill&#146;s House sponsor. &#147;If we make penalties stiffer, maybe they&#146;re not going to want to get involved in this transaction.&#148;
+ </p>
+ <div class="smhalfphoto">
+					<img src="../images/web-ready/felony/felony-2.jpg">
+					
+					<div class="smphotocaption">Jessica Emerson, a member of the Maryland Human Trafficking Task Force, testified before the Senate Judicial Proceedings Committee in March.  Capital News Service Photo by Jon Banister
+</div>
+
+				</div>
+ 
+ <p>
+Jessica Emerson, a fellow at the Women&#146;s Law Center of Maryland, said the state Human Trafficking Task Force withdrew its initial support of the bill after hearing criticism from advocacy organizations such as the Best Practices Policy Project. The critics feared the new law would have created unintended consequences and cast too wide a net on what behavior is considered a felony. 
+</p><p>
+For instance, a friend giving a ride to a sex worker, or acting as a lookout while someone takes a &#147;date,&#148;  could be liable for felony crimes under such a law, even if no trafficking occurs, Saunders of the Best Policy Practices Project, said.  
+</p><p>
+Nathaniel Erb, a policy consultant with The Samaritan Women from January 2015 to May 2015, testified in support of the Senate bill.
+ </p><p>
+For his testimony to the state House and Senate judiciary committees, Erb compiled a list of the lowest possible penalties for human trafficking in all 50 states. He found that only two states, Maryland and Nebraska, have a misdemeanor classification for human trafficking. 
+</p>
+
+<div class="smhalfphoto">
+	<script src="http://code.highcharts.com/maps/highmaps.js"></script>
+	<script src="http://code.highcharts.com/maps/modules/data.js"></script>
+	<script src="http://code.highcharts.com/mapdata/countries/us/us-all.js"></script>
+	<div id="mapcontainer"></div>
+</div>
+
+<p>
+Forty-four states classify trafficking exclusively as a felony. Three states and the District of Columbia do not distinguish between felony and misdemeanor, Erb&#146;s analysis found. But of those three states and the District, only New Jersey has a lower possible penalty than Maryland, according to Erb&#146;s analysis for the legislative hearing. 
+</p><p>
+&#147;Traffickers, especially those that are most notorious, they&#146;re businessmen,&#148; Erb said. &#147;They&#146;re going to look at where their product can be moved to the best location where they can be successful, and they see Maryland having lower penalties and few convictions and they&#146;re going to come here.&#148;
+</p><p>
+One of the business people who has repeatedly ended up in court is a woman who holds a master&#146;s degree in business administration from the University of Baltimore.
+</p><p>
+Di Zhang, 44, has operated massage parlors for years and has faced human trafficking and prostitution charges in Montgomery and Baltimore County dating back to 2008, according to state court records.
+</p><p>
+Once her cases have arrived in court, most of her charges have resulted in a declaration of nolle prosequi, which means the prosecutors dropped the charges.
+</p><p>
+The Maryland State Board of Chiropractic Examiners revoked her massage license in 2004, noting 2003 charges for prostitution and massage law violations in Anne Arundel County and Baltimore County. Her lawyer told the board the charges in both counties had been dropped. 
+</p>
+
+
+<p>
+Di Zhang was found guilty of human trafficking in Baltimore County District Court in 2008, but that conviction was dropped when the case was heard on appeal in the county circuit court. She has since been found guilty of violations of state massage licensing laws and a charge of &#147;general prostitution,&#148; for which she has been fined and placed on probation, according to court records. 
+</p><p>
+In 2012, Zhang was given a formal warning in an interview with a Baltimore County police detective and Homeland Security agents at her business -- Jade Heart Health, according to court records.
+</p><p>
+In a federal civil case in 2013, Zhang had to forfeit one of her properties, which police said was a brothel, and was fined $325,000.
+</p><div class="smmugphoto">
+					<img src="../images/web-ready/felony/felony-3.jpg">
+					<div class="smphotocaption"> Di Zhang, of Towson, has been charged repeatedly with human trafficking and prostitution.  A misdemeanor trafficking conviction in 2008 was dropped when she appealed her case to the Baltimore County Circuit Court. She now is facing trial in Baltimore County on nine charges related to human trafficking and six counts related to prostitution. Photo courtesy Baltimore County Police Department. Capital News Service Photo Illustration   
+
+</div>
+
+				</div><p>
+She was arrested again in March 2013 on human trafficking and prostitution charges in Baltimore County, but all charges were dropped except for a general prostitution charge and a violation of massage licensing laws. 
+</p><p>
+Zhang was ultimately sentenced to two years of supervised probation for the prostitution charge after an Alford plea -- which means she did not admit guilt but acknowledged that if the case went to trial the prosecution had enough evidence to convict her. She also was fined $250 for operating a massage parlor without a license.
+</p><p>
+But she was arrested again in Baltimore County in June 2013, on prostitution charges, only to be brought in again in February 2014 for multiple counts of human trafficking in Montgomery County. The trafficking charges again were dropped. 
+</p><p>
+Zhang could not be reached for comment.
+</p><p>
+Bringing a case to federal court seems to be a logical solution, but it isn&#146;t that simple. Assistant U.S. Attorney Rachel Yasser, who prosecutes federal trafficking cases in Maryland&#146;s federal court, said the best evidence comes from the victims themselves. But witnesses can be difficult to track down. 
+</p>
+
+
+<p>
+Zhang&#146;s massage parlors feature Chinese nationals, said Amanda Rodriguez, who recently stepped down as chief of anti-trafficking policy in the governor&#146;s office and who briefly worked on Zhang&#146;s 2013 Baltimore County case. This makes it harder to prove human trafficking because victims are undocumented citizens who are virtually untraceable.
+</p><p>
+Baltimore County Deputy State&#146;s Attorney John Cox, who took over prosecution for the same case after Rodriguez, said that they couldn&#146;t locate the victims when they were gathering evidence for trial. It was like they vanished.
+</p>
+ <div class="smpullquote">
+ 	<div class="smquotetext">
+ 	<p style="font-style: normal; color: #898989;">State Lawmakers Passed Three Bills to Help Victims of Human Trafficking This Year</p>
+ 	</div>
+ 	<div class="smquotecredit">
+ 	<p style="font-size: 1.2rem; text-decoration: underline; color: #ae1905;"><a href="maryland-legislature-enacted-three-new-laws-aid-human-trafficking.html">Read More >></a> </p>
+ 	</div>
+ 
+ </div><p>
+Without victim testimonies, prosecutors couldn&#146;t provide enough evidence for a human trafficking conviction.
+</p><p>
+One way to stop criminal activity is through seizing their property. 
+</p><p>
+&#147;There are some people where the way to deter them is to put them in prison and there are some people where the way to deter them is to stop them from their criminal enterprise,&#148; Rodriguez said. &#147;I can&#146;t say it has stopped her after her forfeiture with the federal government but I think it is one way to get her in the criminal prosecution.&#148;
+</p><p>
+Earlier this year, Zhang was arrested in Baltimore County for violating her supervised probation. She is charged with nine counts related to human trafficking and six counts of related to prostitution.  She faces trial in Baltimore County Circuit Court. 
+</p><p class="smcredits">
+Jin Kim contributed to this article.
+</p>
+
+
+				</div>
+			</div>
+		</div>
+			<div class="footer">
+			<a href="http://merrill.umd.edu/">
+				<img src="../images/merrilllogo.png" alt="Merrill logo">
+			</a>
+			<div class="copyright">&copy; 2015 University of Maryland</div>
+			<a href="http://cnsmaryland.org/">
+				<img src="../images/cns-logo.png" alt="Capital News Service logo">
+			</a>
+		</div>
+		<!--===== JAVASCRIPT =====-->
+		<script src="../js/script.js" type="text/javascript"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-25499091-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	</body>
+</html>
